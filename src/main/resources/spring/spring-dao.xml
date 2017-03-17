@@ -47,7 +47,8 @@
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 		<!-- 给出需要扫描的Dao接口,并扫描spring中的注解-->
 		<property name="basePackage" value="org.seckill.dao"></property>
-	</bean> 
+	</bean>
+
 	<!--RedisDao-->
 	<bean id="redisDao" class="org.seckill.dao.cache.RedisDao">
 		<constructor-arg index="0" value="localhost"></constructor-arg>
