@@ -5,7 +5,7 @@ import org.seckill.entity.SuccessKilled;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by wchb7 on 16-5-8.
+ * Created by daiwei on 16-5-8.
  */
 @Component
 public interface SuccessKilledDao {
