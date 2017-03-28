@@ -11,9 +11,12 @@ import com.dyuproject.protostuff.runtime.RuntimeSchema;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
+
 public class RedisDao {
 	private final Log LOG = LogFactory.getLog(this.getClass());
+	//相当于数据库的连接池
 	private final JedisPool jedisPool;
+
 	private RuntimeSchema<Seckill> schema = RuntimeSchema
 			.createFrom(Seckill.class);
 	/**

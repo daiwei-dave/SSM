@@ -1,9 +1,6 @@
 package org.seckill.service;
 
 import java.util.List;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.seckill.dto.Exposer;
@@ -58,10 +55,8 @@ public class SeckillServiceTest {
 	public void testExportSeckillUrl() throws Exception {
 		long id = 1002;
 		Exposer exposer = seckillService.exportSeckillUrl(id);
+		logger.debug("¿ªÊ¼Ö´ÐÐ°É");
 		logger.info("exposer={}", exposer);
-		// 19:14:45.841 [main] INFO o.seckill.service.SeckillServiceTest -
-		// exposer=Exposer{exposed=true, md5='9b8082b22ded08718a4255e9f482a80c',
-		// seckillId=1000, now=0, start=0, end=0}
 	}
 
 	@Test

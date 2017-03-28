@@ -10,7 +10,7 @@
     </encoder>
   </appender>
 	<!--打印级别debug -->
-  <root level="debug">
+  <root level="DEBUG">
     <appender-ref ref="STDOUT" />
   </root>
 </configuration>
