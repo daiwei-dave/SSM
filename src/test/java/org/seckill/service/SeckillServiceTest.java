@@ -56,7 +56,7 @@ public class SeckillServiceTest {
 		long id = 1002;
 		Exposer exposer = seckillService.exportSeckillUrl(id);
 		logger.debug("¿ªÊ¼Ö´ÐÐ°É");
-		logger.info("exposer={}", exposer);
+		logger.warn("exposer={}", exposer);
 	}
 
 	@Test

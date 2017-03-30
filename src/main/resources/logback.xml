@@ -9,8 +9,19 @@
       <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
     </encoder>
   </appender>
+
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <file>my.log</file>
+    <encoder>
+      <pattern>%d{yyyy:MM:dd HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{80} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  <!--logger name的优先级高于root -->
+  <logger name="org.seckill" level="DEBUG" additivityFlag="false">
+    <appender-ref ref="FILE"></appender-ref>
+  </logger>
 	<!--打印级别debug -->
-  <root level="DEBUG">
-    <appender-ref ref="STDOUT" />
+  <root level="INFO">
+    <appender-ref ref="STDOUT" level="DEBUG"/>
   </root>
 </configuration>
