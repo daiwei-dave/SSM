@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+
+  <property  name="USER_HOME" value="home/sebastien"/>
 	<!--在控制台打印 -->
   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
     <!-- encoders are assigned the type
@@ -11,17 +13,19 @@
   </appender>
 
   <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-    <file>my.log</file>
+    <file>${USER_HOME}/my.log</file>
     <encoder>
-      <pattern>%d{yyyy:MM:dd HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{80} - %msg%n</pattern>
+      <pattern>%5p %d{yyyy:MM:dd HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{80} - %msg%n</pattern>
     </encoder>
   </appender>
   <!--logger name的优先级高于root -->
-  <logger name="org.seckill" level="DEBUG" additivityFlag="false">
+  <logger name="org.seckill" level="INFO" additivityFlag="false">
     <appender-ref ref="FILE"></appender-ref>
   </logger>
 	<!--打印级别debug -->
   <root level="INFO">
     <appender-ref ref="STDOUT" level="DEBUG"/>
   </root>
+
+
 </configuration>
