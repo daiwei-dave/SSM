@@ -19,11 +19,11 @@
     </encoder>
   </appender>
   <!--logger name的优先级高于root -->
-  <logger name="org.seckill" level="INFO" additivityFlag="false">
+  <logger name="org.seckill" level="DEBUG" additivityFlag="false">
     <appender-ref ref="FILE"></appender-ref>
   </logger>
 	<!--打印级别debug -->
-  <root level="INFO">
+  <root level="DEBUG">
     <appender-ref ref="STDOUT" level="DEBUG"/>
   </root>
 
