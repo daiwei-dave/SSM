@@ -21,22 +21,9 @@
 	<div id="container">
 
 		<div id="box">
-		  <% 
-		     String userName = "";
-		     long id=0;
-		     if(session.getAttribute("user")!=null)
-		     {
-				 User user = (User) session.getAttribute("user");
-				 userName=user.getName();
-				 id=user.getId();
-				 session.setAttribute("uid",id);
-			 }
-		  %>
-		     欢迎您<font color="red"><%=userName%></font>,登录成功！
+		     登录失败！
 		</div>
-		<a href="/items/list">显示所有商品</a><br>
-		<a href="/cart/findMyCart?uID=<%=session.getAttribute("uid")%>">查看我的购物车</a><br>
-		<a href="/items/getItemsByCart?uID=<%=session.getAttribute("uid")%>">你可能感兴趣的商品</a>
+
 	</div>
 	</body>
 </html>

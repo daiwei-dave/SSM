@@ -14,7 +14,7 @@
 <head>
     <base href="<%=basePath%>">
 
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>推荐系统</title>
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="expires" content="0">
@@ -51,29 +51,31 @@
 <body>
 <h1>商品展示</h1>
 <hr>
-
-<table width="750" height="60" cellpadding="0" cellspacing="0" border="0">
-    <%
-        List<Items> list = (List<Items>) request.getSession().getAttribute("itemsList");
-        if(list!=null&&list.size()>0)
-        {
-            for(int i=0;i<list.size();i++)
-            {
-                Items item = list.get(i);
-    %>
-    <tr>
-        <td>商品id：<%=item.getId()%></td>
-        <td class="dd_name">商品名：<%=item.getName() %></td>
-        <td class="dd_city">产地:<%=item.getCity() %></td>
-        <td>价格:￥<%=item.getPrice() %></td>
-        <td><a href="/cart/add?itemsID=<%=item.getId()%>&uID=<%=session.getAttribute("uid")%>">添加进购物车</a></td>
-        </br>
-    </tr>
-<%
-        }
-    }
-%>
-</table>
-
+<div id="container">
+    <table width="750" height="60" cellpadding="0" cellspacing="0" border="0">
+        <%
+            List<Items> list = (List<Items>) request.getSession().getAttribute("itemsList");
+            if (list != null && list.size() > 0) {
+                for (int i = 0; i < list.size(); i++) {
+                    Items item = list.get(i);
+        %>
+        <tr>
+            <td>商品id：<%=item.getId()%>
+            </td>
+            <td class="dd_name">商品名：<%=item.getName() %>
+            </td>
+            <td class="dd_city">产地:<%=item.getCity() %>
+            </td>
+            <td>价格:￥<%=item.getPrice() %>
+            </td>
+            <td><a href="/cart/add?itemsID=<%=item.getId()%>&uID=<%=session.getAttribute("uid")%>">添加进购物车</a></td>
+            </br>
+        </tr>
+        <%
+                }
+            }
+        %>
+    </table>
+</div>
 </body>
 </html>

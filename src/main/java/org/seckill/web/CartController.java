@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,7 +36,8 @@ public class CartController {
 
     @RequestMapping(value="/findMyCart",method= RequestMethod.GET)
     public String findMyCart(HttpServletRequest request,long uID){
-        List<Items> myCart = cartService.findMyCart(uID);
+        List<Items> myCart=new ArrayList<Items>();
+        myCart = cartService.findMyCart(uID);
         request.getSession().setAttribute("myCart",myCart);
         return "myCart";
     }

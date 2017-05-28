@@ -7,7 +7,7 @@
 <html>
 	<head>
 		<!-- Page title -->
-		<title>imooc - Login</title>
+		<title>推荐系统</title>
 		<!-- End of Page title -->
 		<!-- Libraries -->
 		<link type="text/css" href="css/login.css" rel="stylesheet" />	

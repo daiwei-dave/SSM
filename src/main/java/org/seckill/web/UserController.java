@@ -30,8 +30,16 @@ public class UserController {
 			request.getSession().setAttribute("user",checkUser);
 			return "login_success";
 		}else {
-			return "failure";
+			return "login_fail";
 		}
+	}
 
+	/**
+	 * 返回首页
+	 * @return
+	 */
+	@RequestMapping(value="/returnHome")
+	public String returnHome() {
+		return "login_success";
 	}
 }

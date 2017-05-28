@@ -14,7 +14,7 @@
 <head>
     <base href="<%=basePath%>">
 
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>推荐系统</title>
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="expires" content="0">
@@ -50,6 +50,7 @@
 
 <body>
 <h1>我的购物车</h1>
+<a href="user/returnHome">返回首页</a>
 <hr>
 
 <table width="750" height="60" cellpadding="0" cellspacing="0" border="0">

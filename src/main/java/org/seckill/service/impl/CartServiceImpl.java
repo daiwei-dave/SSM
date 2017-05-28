@@ -23,7 +23,7 @@ public class CartServiceImpl implements CartService{
     @Autowired
     private ItemsDao itemsDao;
 
-    List<Items> listItem=new ArrayList<Items>();
+
 
     public int addCart(long itemsID, long uID) {
         return cartDao.addCart(itemsID, uID);
@@ -32,7 +32,7 @@ public class CartServiceImpl implements CartService{
     public List<Items> findMyCart(long uID) {
 
         List<Cart> cart = cartDao.findMyCart(uID);
-
+        List<Items> listItem=new ArrayList<Items>();
         //遍历购物车
         for (Cart c:cart) {
             //通过商品id获取商品,并添加进list集合
