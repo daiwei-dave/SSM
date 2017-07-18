@@ -13,5 +13,10 @@
     <setting name="useColumnLabel" value="true"/>
     <!--开启驼峰命名转换Table:create_time到 Entity(createTime)-->
     <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+      <!--开启二级缓存-->
+      <setting name="cacheEnabled" value="true"/>
+
+
   </settings>
 </configuration>

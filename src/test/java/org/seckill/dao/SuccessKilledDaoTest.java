@@ -1,5 +1,6 @@
 package org.seckill.dao;
 
+import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.seckill.entity.SuccessKilled;
@@ -29,11 +30,28 @@ public class SuccessKilledDaoTest {
 
     @Test
     public void testQueryByIdWithSeckill() throws Exception {
-    	long id = 1001L;
+
+        long id = 1002L;
         long phone = 15811112222L;
         SuccessKilled successKilled=successKilledDao.queryByIdWithSeckill(id, phone);
         System.out.println(successKilled);
         System.out.println(successKilled.getSeckill());
-        
+    }
+
+
+    /**
+     * 测试mybatis二级缓存
+     * @throws Exception
+     */
+    @Test
+    public void testCache2() throws Exception {
+        long id = 1002L;
+        long phone = 15811112222L;
+        SuccessKilled successKilled=successKilledDao.queryByIdWithSeckill(id, phone);
+        System.out.println(successKilled);
+        System.out.println(successKilled.getSeckill());
+        //第二次查询时从缓存中读取
+        SuccessKilled successKilled2=successKilledDao.queryByIdWithSeckill(id, phone);
+        System.out.println(successKilled2);
     }
 }
