@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.seckill.dao.CartDao">
+
+
+	<!--通过ignore关键字将主键冲突时的报错改为返回0-->
+	<insert id="addCart">
+		INSERT ignore INTO cart(itemsID,uID)
+		values(#{itemsID},#{uID})
+	</insert>
+
+	<select id="findMyCart" resultType="Cart">
+		select * from cart
+		where uid=#{uID}
+	</select>
+	<delete id="deleteAll">
+		DELETE FROM cart
+	</delete>
+
+	<select id="findMyCartByUIdAndItemsID" resultType="Cart">
+		select * from cart
+		where uid=#{uID} AND itemsID=#{itemsID}
+	</select>
+
+</mapper>
