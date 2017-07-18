@@ -67,3 +67,35 @@ DEBUG 2017:07:18 14:46:22.061 default [main] DEBUG org.seckill.dao.SuccessKilled
 DEBUG 2017:07:18 14:46:22.068 default [main] DEBUG org.seckill.dao.SuccessKilledDao.queryByIdWithSeckill - ==>  Preparing: SELECT sk.seckill_id,sk.user_phone,sk.create_time,sk.state, s.seckill_id "seckill.seckill_id", s.number "seckill.number", s.name "seckill.name", s.start_time "seckill.start_time", s.end_time "seckill.end_time", s.create_time "seckill.create_time" FROM success_killed sk INNER JOIN seckill s ON sk.seckill_id=s.seckill_id WHERE sk.seckill_id=? and sk.user_phone=?; 
 DEBUG 2017:07:18 14:46:22.068 default [main] DEBUG org.seckill.dao.SuccessKilledDao.queryByIdWithSeckill - ==> Parameters: 1002(Long), 15811112222(Long)
 DEBUG 2017:07:18 14:46:22.070 default [main] DEBUG org.seckill.dao.SuccessKilledDao.queryByIdWithSeckill - <==      Total: 1
+DEBUG 2017:07:18 15:09:40.520 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2017:07:18 15:09:40.558 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2017:07:18 15:19:48.943 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2017:07:18 15:19:48.988 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2017:07:18 15:19:49.010 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10
+DEBUG 2017:07:18 15:20:51.369 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2017:07:18 15:20:51.402 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2017:07:18 15:20:51.423 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10
+DEBUG 2017:07:18 18:17:24.243 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2017:07:18 18:17:24.275 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2017:07:18 18:17:24.296 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10
+DEBUG 2017:07:18 18:21:01.617 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2017:07:18 18:21:01.648 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2017:07:18 18:21:01.668 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10
+DEBUG 2017:07:18 18:21:19.626 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2017:07:18 18:21:19.658 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2017:07:18 18:21:19.682 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10
+DEBUG 2017:07:18 18:22:13.291 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2017:07:18 18:22:13.323 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2017:07:18 18:22:13.344 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10
+DEBUG 2017:07:18 18:22:30.648 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2017:07:18 18:22:30.680 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2017:07:18 18:22:30.699 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10
+DEBUG 2017:07:18 18:22:44.263 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2017:07:18 18:22:44.294 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2017:07:18 18:22:44.317 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10
+DEBUG 2017:07:18 18:38:10.397 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2017:07:18 18:38:10.424 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2017:07:18 18:38:10.446 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10
+DEBUG 2017:07:18 18:38:37.339 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2017:07:18 18:38:37.367 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2017:07:18 18:38:37.394 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10

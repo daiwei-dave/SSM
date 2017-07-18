@@ -47,4 +47,4 @@ INSERT INTO `items` VALUES ('10', 'ipad5', '北京', '5999', '500', '010.jpg');
 -- ----------------------------
 -- 增加商品类型
 -- ----------------------------
-alter table items add TYPE varchar(10) not Null
+alter table items add TYPE varchar(10) not Null;

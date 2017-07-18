@@ -3,6 +3,7 @@ package org.seckill.service.impl;
 import org.seckill.dao.ItemsDao;
 import org.seckill.entity.Cart;
 import org.seckill.entity.Items;
+import org.seckill.entity.Pager;
 import org.seckill.service.CartService;
 import org.seckill.service.ItemsService;
 import org.slf4j.Logger;
@@ -46,5 +47,10 @@ public class ItemsServiceImpl implements ItemsService{
 
     public List<Items> getAllItems() {
         return itemsDao.getAllItems();
+    }
+
+    public Pager<Items> getAllItems(Items items, int pageNum, int pageSize) {
+        Pager<Items> itemsPager = new Pager<Items>(pageNum, pageSize, itemsDao.getAllItems());
+        return itemsPager;
     }
 }
