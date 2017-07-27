@@ -22,7 +22,7 @@ public class Pager<T> implements Serializable {
 	private int totalPage; // 一共多少页记录
 
 	//List<T>是ArrayList类的泛型，在使用时确定
-	private List<T> dataList; //要显示的数据
+	private List<T> data; //要显示的数据
 
 	/**
 	 * subList方式实现分页的构造方法
@@ -56,7 +56,7 @@ public class Pager<T> implements Serializable {
 		// 结束索引
 		int toIndex  = this.pageSize * this.currentPage > this.totalRecord ? this.totalRecord : this.pageSize * this.currentPage;
 		//要显示的数据		
-		this.dataList = sourceList.subList(fromIndex, toIndex);
+		this.data = sourceList.subList(fromIndex, toIndex);
 	}
 	
 	public Pager(){
@@ -77,7 +77,7 @@ public class Pager<T> implements Serializable {
 		this.currentPage = currentPage;
 		this.totalRecord = totalRecord;
 		this.totalPage = totalPage;
-		this.dataList = dataList;
+		this.data = dataList;
 	}
 
 	public int getPageSize() {
@@ -112,19 +112,19 @@ public class Pager<T> implements Serializable {
 		this.totalPage = totalPage;
 	}
 
-	public List<T> getDataList() {
-		return dataList;
+	public List<T> getData() {
+		return data;
 	}
 
-	public void setDataList(List<T> dataList) {
-		this.dataList = dataList;
+	public void setData(List<T> data) {
+		this.data = data;
 	}
 
 	@Override
 	public String toString() {
 		return "Pager [pageSize=" + pageSize + ", currentPage=" + currentPage
 				+ ", totalRecord=" + totalRecord + ", totalPage=" + totalPage
-				+ ", dataList=" + dataList + "]";
+				+ ", data=" + data + "]";
 	}
 
 }

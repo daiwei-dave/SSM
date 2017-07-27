@@ -12,8 +12,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by daiwei on 2017/7/18.
  */
@@ -37,8 +35,8 @@ public class ItemsServiceTest {
     @Test
     public void getAllItems1() throws Exception {
         Pager<Items> allItems = itemsService.getAllItems(new Items(), 0, 3);
-        for (int i = 0; i <allItems.getDataList().size() ; i++) {
-            System.out.println(allItems.getDataList().get(i).toString());
+        for (int i = 0; i <allItems.getData().size() ; i++) {
+            System.out.println(allItems.getData().get(i).toString());
         }
     }
 
