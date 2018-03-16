@@ -227,3 +227,58 @@ DEBUG 2017:09:15 16:19:42.529 default [main] DEBUG org.seckill.dao.SeckillDao.qu
 DEBUG 2017:09:15 17:21:43.815 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - ==>  Preparing: SELECT seckill_id,name,number,start_time,end_time,create_time FROM seckill WHERE seckill_id = ? 
 DEBUG 2017:09:15 17:21:43.998 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - ==> Parameters: 1001(Long)
 DEBUG 2017:09:15 17:21:44.147 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - <==      Total: 1
+DEBUG 2018:01:22 18:35:20.589 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - ==>  Preparing: SELECT seckill_id,name,number,start_time,end_time,create_time FROM seckill WHERE seckill_id = ? 
+DEBUG 2018:01:22 18:35:20.629 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - ==> Parameters: 1001(Long)
+DEBUG 2018:01:22 18:35:20.646 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - <==      Total: 1
+DEBUG 2018:01:22 18:35:22.696 default [main] DEBUG org.seckill.dao.CartDao.addCart - ==>  Preparing: INSERT ignore INTO cart(itemsID,uID) values(?,?) 
+DEBUG 2018:01:22 18:35:22.697 default [main] DEBUG org.seckill.dao.CartDao.addCart - ==> Parameters: 13(Long), 2(Long)
+DEBUG 2018:01:22 18:35:22.768 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2018:01:22 18:35:22.769 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2018:01:22 18:35:22.774 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10
+DEBUG 2018:01:22 18:35:22.784 default [main] DEBUG org.seckill.dao.SuccessKilledDao.queryByIdWithSeckill - ==>  Preparing: SELECT sk.seckill_id,sk.user_phone,sk.create_time,sk.state, s.seckill_id "seckill.seckill_id", s.number "seckill.number", s.name "seckill.name", s.start_time "seckill.start_time", s.end_time "seckill.end_time", s.create_time "seckill.create_time" FROM success_killed sk INNER JOIN seckill s ON sk.seckill_id=s.seckill_id WHERE sk.seckill_id=? and sk.user_phone=?; 
+DEBUG 2018:01:22 18:35:22.784 default [main] DEBUG org.seckill.dao.SuccessKilledDao.queryByIdWithSeckill - ==> Parameters: 1002(Long), 15811112222(Long)
+DEBUG 2018:01:22 18:35:22.788 default [main] DEBUG org.seckill.dao.SuccessKilledDao.queryByIdWithSeckill - <==      Total: 1
+DEBUG 2018:01:22 18:35:22.790 default [main] DEBUG org.seckill.dao.SuccessKilledDao.queryByIdWithSeckill - ==>  Preparing: SELECT sk.seckill_id,sk.user_phone,sk.create_time,sk.state, s.seckill_id "seckill.seckill_id", s.number "seckill.number", s.name "seckill.name", s.start_time "seckill.start_time", s.end_time "seckill.end_time", s.create_time "seckill.create_time" FROM success_killed sk INNER JOIN seckill s ON sk.seckill_id=s.seckill_id WHERE sk.seckill_id=? and sk.user_phone=?; 
+DEBUG 2018:01:22 18:35:22.790 default [main] DEBUG org.seckill.dao.SuccessKilledDao.queryByIdWithSeckill - ==> Parameters: 1002(Long), 15811112222(Long)
+DEBUG 2018:01:22 18:35:22.792 default [main] DEBUG org.seckill.dao.SuccessKilledDao.queryByIdWithSeckill - <==      Total: 1
+DEBUG 2018:01:22 18:35:22.794 default [main] DEBUG org.seckill.dao.SuccessKilledDao.queryByIdWithSeckill - ==>  Preparing: SELECT sk.seckill_id,sk.user_phone,sk.create_time,sk.state, s.seckill_id "seckill.seckill_id", s.number "seckill.number", s.name "seckill.name", s.start_time "seckill.start_time", s.end_time "seckill.end_time", s.create_time "seckill.create_time" FROM success_killed sk INNER JOIN seckill s ON sk.seckill_id=s.seckill_id WHERE sk.seckill_id=? and sk.user_phone=?; 
+DEBUG 2018:01:22 18:35:22.794 default [main] DEBUG org.seckill.dao.SuccessKilledDao.queryByIdWithSeckill - ==> Parameters: 1002(Long), 15811112222(Long)
+DEBUG 2018:01:22 18:35:22.796 default [main] DEBUG org.seckill.dao.SuccessKilledDao.queryByIdWithSeckill - <==      Total: 1
+DEBUG 2018:01:22 18:35:22.798 default [main] DEBUG org.seckill.dao.SuccessKilledDao.insertSuccessKilled - ==>  Preparing: INSERT ignore INTO success_killed(seckill_id,user_phone,state) values(?,?,0) 
+DEBUG 2018:01:22 18:35:22.799 default [main] DEBUG org.seckill.dao.SuccessKilledDao.insertSuccessKilled - ==> Parameters: 1002(Long), 15811112222(Long)
+DEBUG 2018:01:22 18:35:22.800 default [main] DEBUG org.seckill.dao.SuccessKilledDao.insertSuccessKilled - <==    Updates: 0
+DEBUG 2018:01:22 18:35:23.208 default [main] DEBUG org.seckill.dao.CartDao.addCart - ==>  Preparing: INSERT ignore INTO cart(itemsID,uID) values(?,?) 
+DEBUG 2018:01:22 18:35:23.210 default [main] DEBUG org.seckill.dao.CartDao.addCart - ==> Parameters: 11(Long), 4(Long)
+DEBUG 2018:01:22 18:35:23.217 default [main] DEBUG org.seckill.dao.CartDao.findMyCart - ==>  Preparing: select * from cart where uid=? 
+DEBUG 2018:01:22 18:35:23.217 default [main] DEBUG org.seckill.dao.CartDao.findMyCart - ==> Parameters: 1(Long)
+DEBUG 2018:01:22 18:35:23.226 default [main] DEBUG org.seckill.dao.CartDao.findMyCart - ==>  Preparing: select * from cart where uid=? 
+DEBUG 2018:01:22 18:35:23.227 default [main] DEBUG org.seckill.dao.CartDao.findMyCart - ==> Parameters: 1(Long)
+DEBUG 2018:01:22 18:35:23.235 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2018:01:22 18:35:23.236 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2018:01:22 18:35:23.241 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10
+DEBUG 2018:01:22 18:35:23.242 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==>  Preparing: select * from items 
+DEBUG 2018:01:22 18:35:23.243 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - ==> Parameters: 
+DEBUG 2018:01:22 18:35:23.246 default [main] DEBUG org.seckill.dao.ItemsDao.getAllItems - <==      Total: 10
+DEBUG 2018:01:22 18:35:24.273 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - ==>  Preparing: SELECT seckill_id,name,number,start_time,end_time,create_time FROM seckill WHERE seckill_id = ? 
+DEBUG 2018:01:22 18:35:24.274 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - ==> Parameters: 1001(Long)
+DEBUG 2018:01:22 18:35:24.281 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - <==      Total: 1
+ WARN 2018:01:22 18:35:25.286 default [main] WARN  org.seckill.service.SeckillServiceTest - ???δ???? Exposer{exposed=false, md5='null', seckillId=1001, now=1516617325285, start=1487520000000, end=1424448000000}
+DEBUG 2018:01:22 18:35:26.302 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - ==>  Preparing: SELECT seckill_id,name,number,start_time,end_time,create_time FROM seckill WHERE seckill_id = ? 
+DEBUG 2018:01:22 18:35:26.303 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - ==> Parameters: 1002(Long)
+DEBUG 2018:01:22 18:35:26.307 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - <==      Total: 1
+DEBUG 2018:01:22 18:35:27.323 default [main] DEBUG org.seckill.service.SeckillServiceTest - ?????а?
+ WARN 2018:01:22 18:35:27.323 default [main] WARN  org.seckill.service.SeckillServiceTest - exposer=Exposer{exposed=false, md5='null', seckillId=1002, now=1516617327323, start=1487520000000, end=1424448000000}
+DEBUG 2018:01:22 18:35:27.327 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - ==>  Preparing: SELECT seckill_id,name,number,start_time,end_time,create_time FROM seckill WHERE seckill_id = ? 
+DEBUG 2018:01:22 18:35:27.328 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - ==> Parameters: 1000(Long)
+DEBUG 2018:01:22 18:35:27.331 default [main] DEBUG org.seckill.dao.SeckillDao.queryById - <==      Total: 1
+ INFO 2018:01:22 18:35:27.333 default [main] INFO  org.seckill.service.SeckillServiceTest - seckill=Seckill{seckillId=1000, name='1000元秒杀iphone6s', number=100, startTime=Mon Feb 20 00:00:00 GMT+08:00 2017, endTime=Sat Feb 21 00:00:00 GMT+08:00 2015, createTime=Mon Mar 20 17:33:03 GMT+08:00 2017}
+DEBUG 2018:01:22 18:35:27.373 default [main] DEBUG org.seckill.dao.SuccessKilledDao.insertSuccessKilled - ==>  Preparing: INSERT ignore INTO success_killed(seckill_id,user_phone,state) values(?,?,0) 
+DEBUG 2018:01:22 18:35:27.375 default [main] DEBUG org.seckill.dao.SuccessKilledDao.insertSuccessKilled - ==> Parameters: 1000(Long), 15821739111(Long)
+DEBUG 2018:01:22 18:35:27.412 default [main] DEBUG org.seckill.dao.SuccessKilledDao.insertSuccessKilled - <==    Updates: 1
+DEBUG 2018:01:22 18:35:27.415 default [main] DEBUG org.seckill.dao.SeckillDao.reduceNumber - ==>  Preparing: UPDATE seckill set number = number -1 where seckill_id=? AND start_time <= ? AND end_time>=? AND number>0; 
+DEBUG 2018:01:22 18:35:27.419 default [main] DEBUG org.seckill.dao.SeckillDao.reduceNumber - ==> Parameters: 1000(Long), 2018-01-22 18:35:27.369(Timestamp), 2018-01-22 18:35:27.369(Timestamp)
+DEBUG 2018:01:22 18:35:27.421 default [main] DEBUG org.seckill.dao.SeckillDao.reduceNumber - <==    Updates: 0
+DEBUG 2018:01:22 18:35:27.468 default [main] DEBUG org.seckill.dao.SeckillDao.queryAll - ==>  Preparing: SELECT seckill_id,name,number,start_time,end_time,create_time FROM seckill ORDER BY create_time DESC limit ?,? 
+DEBUG 2018:01:22 18:35:27.468 default [main] DEBUG org.seckill.dao.SeckillDao.queryAll - ==> Parameters: 0(Integer), 5(Integer)
+DEBUG 2018:01:22 18:35:27.476 default [main] DEBUG org.seckill.dao.SeckillDao.queryAll - <==      Total: 4
+ INFO 2018:01:22 18:35:27.477 default [main] INFO  org.seckill.service.SeckillServiceTest - list=[Seckill{seckillId=1000, name='1000元秒杀iphone6s', number=100, startTime=Mon Feb 20 00:00:00 GMT+08:00 2017, endTime=Sat Feb 21 00:00:00 GMT+08:00 2015, createTime=Mon Mar 20 17:33:03 GMT+08:00 2017}, Seckill{seckillId=1001, name='500元秒杀ipad2', number=200, startTime=Mon Feb 20 00:00:00 GMT+08:00 2017, endTime=Sat Feb 21 00:00:00 GMT+08:00 2015, createTime=Mon Mar 20 17:33:03 GMT+08:00 2017}, Seckill{seckillId=1002, name='300元秒杀小米5s', number=300, startTime=Mon Feb 20 00:00:00 GMT+08:00 2017, endTime=Sat Feb 21 00:00:00 GMT+08:00 2015, createTime=Mon Mar 20 17:33:03 GMT+08:00 2017}, Seckill{seckillId=1003, name='200元秒杀红米Note', number=400, startTime=Mon Feb 20 00:00:00 GMT+08:00 2017, endTime=Sat Feb 21 00:00:00 GMT+08:00 2015, createTime=Mon Mar 20 17:33:03 GMT+08:00 2017}]
